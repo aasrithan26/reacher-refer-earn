@@ -46,7 +46,7 @@ Creators get a personal link and invite other creators (or brands) into Reacher.
 
 A parallel track pays **$500** when a referred brand runs its first campaign, and the top three referrers each cycle (surfaced against the app's existing Climb-tier system) unlock a shared crew bonus — folding the loop into a system creators already check, instead of bolting on a new one.
 
-> "You earn milestone bonuses paid by Reacher when a creator you bring hits real milestones. It's never taken from their earnings."
+> "Paid by Reacher when a creator you bring hits real milestones — never a cut of their earnings."
 >
 > — on-screen trust line, always visible on the Refer & Earn screen
 
