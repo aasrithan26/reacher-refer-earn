@@ -1,0 +1,335 @@
+<title>Refer &amp; Earn Case Study</title>
+<style>
+  :root {
+    --ink: #0B0B0C;
+    --ink-soft: #2E2E31;
+    --muted: #63636A;
+    --soft: #96969E;
+    --line: #E4E3E8;
+    --line-soft: #EEEDF1;
+    --bg: #FAF9FB;
+    --card: #FFFFFF;
+    --violet: #7257FF;
+    --violet-deep: #5336E2;
+    --violet-tint: #F4F1FF;
+    --violet-fg: #5336E2;
+    --success-fg: #14532D;
+    --success-bg: #DCFCE7;
+    --warn-fg: #92400E;
+    --warn-bg: #FEF3C7;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ink: #F2F1F5;
+      --ink-soft: #D8D7DE;
+      --muted: #A5A4AD;
+      --soft: #75747C;
+      --line: #302F36;
+      --line-soft: #26252B;
+      --bg: #17161B;
+      --card: #1E1D23;
+      --violet-tint: #26224A;
+      --violet-fg: #B4A6FF;
+      --success-bg: #123321;
+      --success-fg: #7FE3A6;
+      --warn-bg: #3A2C0E;
+      --warn-fg: #F0C36B;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ink: #F2F1F5;
+    --ink-soft: #D8D7DE;
+    --muted: #A5A4AD;
+    --soft: #75747C;
+    --line: #302F36;
+    --line-soft: #26252B;
+    --bg: #17161B;
+    --card: #1E1D23;
+    --violet-tint: #26224A;
+    --violet-fg: #B4A6FF;
+    --success-bg: #123321;
+    --success-fg: #7FE3A6;
+    --warn-bg: #3A2C0E;
+    --warn-fg: #F0C36B;
+  }
+
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body {
+    background: var(--bg);
+    color: var(--ink-soft);
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  ::selection { background: var(--violet-tint); color: var(--violet-fg); }
+
+  .wrap {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 64px 24px 96px;
+  }
+
+  .kicker {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--violet-fg); margin-bottom: 18px;
+  }
+  .kicker::before {
+    content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--violet);
+  }
+
+  h1 {
+    font-size: 42px; font-weight: 800; letter-spacing: -0.03em; line-height: 1.05;
+    color: var(--ink); margin: 0 0 14px; text-wrap: balance;
+  }
+  .dek {
+    font-size: 18px; color: var(--muted); line-height: 1.55; margin: 0 0 8px; max-width: 60ch;
+  }
+  .byline {
+    font-size: 13px; color: var(--soft); margin-top: 22px; padding-top: 22px; border-top: 1px solid var(--line);
+  }
+
+  h2 {
+    font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--violet-fg); margin: 56px 0 16px;
+  }
+  h3 {
+    font-size: 20px; font-weight: 700; letter-spacing: -0.01em; color: var(--ink);
+    margin: 0 0 10px;
+  }
+  p { margin: 0 0 16px; max-width: 66ch; }
+  strong { color: var(--ink); font-weight: 700; }
+
+  .lede {
+    font-size: 17px;
+  }
+
+  ul.plain { margin: 0 0 16px; padding-left: 20px; }
+  ul.plain li { margin-bottom: 8px; max-width: 62ch; }
+
+  blockquote {
+    margin: 24px 0; padding: 4px 0 4px 20px; border-left: 3px solid var(--violet);
+    font-size: 18px; font-style: normal; color: var(--ink); line-height: 1.5; max-width: 58ch;
+  }
+  blockquote cite {
+    display: block; font-style: normal; font-size: 13px; color: var(--soft); margin-top: 8px;
+  }
+
+  .callout {
+    background: var(--card); border: 1px solid var(--line); border-radius: 16px;
+    padding: 20px 22px; margin: 20px 0;
+  }
+  .callout .label {
+    font-size: 11px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+    color: var(--soft); margin-bottom: 6px;
+  }
+
+  table {
+    width: 100%; border-collapse: collapse; margin: 8px 0 20px; font-size: 14.5px;
+    background: var(--card); border: 1px solid var(--line); border-radius: 14px; overflow: hidden;
+  }
+  .table-scroll { overflow-x: auto; border-radius: 14px; }
+  th, td {
+    text-align: left; padding: 12px 14px; border-bottom: 1px solid var(--line-soft);
+    vertical-align: top;
+  }
+  th {
+    font-size: 11px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase;
+    color: var(--soft); background: var(--line-soft);
+  }
+  tr:last-child td { border-bottom: none; }
+  td.hl { color: var(--violet-fg); font-weight: 700; }
+  .pill {
+    display: inline-block; font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 5px;
+  }
+  .pill-warn { background: var(--warn-bg); color: var(--warn-fg); }
+  .pill-good { background: var(--success-bg); color: var(--success-fg); }
+
+  .grid2 {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 8px 0 20px;
+  }
+  @media (max-width: 560px) { .grid2 { grid-template-columns: 1fr; } }
+  .stat-card {
+    background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 16px 18px;
+  }
+  .stat-card .num {
+    font-size: 26px; font-weight: 800; color: var(--ink); letter-spacing: -0.02em;
+    font-variant-numeric: tabular-nums;
+  }
+  .stat-card .cap { font-size: 13px; color: var(--muted); margin-top: 4px; }
+
+  .steps { display: flex; flex-direction: column; gap: 0; margin: 8px 0 20px; }
+  .step {
+    display: flex; gap: 14px; padding: 14px 0; border-bottom: 1px solid var(--line-soft);
+  }
+  .step:last-child { border-bottom: none; }
+  .step .n {
+    flex-shrink: 0; width: 26px; height: 26px; border-radius: 50%;
+    background: var(--violet-tint); color: var(--violet-fg); font-size: 12px; font-weight: 800;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .step .body { padding-top: 2px; }
+  .step .t { font-weight: 700; color: var(--ink); font-size: 14.5px; margin-bottom: 2px; }
+  .step .d { font-size: 14px; color: var(--muted); }
+
+  .links {
+    display: flex; flex-wrap: wrap; gap: 10px; margin: 8px 0 8px;
+  }
+  .linkcard {
+    flex: 1 1 240px;
+    background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px;
+  }
+  .linkcard .k { font-size: 11px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: var(--soft); margin-bottom: 4px; }
+  .linkcard .v { font-size: 14.5px; color: var(--ink); font-weight: 600; }
+  .linkcard .v span { color: var(--muted); font-weight: 400; display: inline-block; margin-top: 4px; }
+  .linkcard .v a { color: var(--violet-fg); font-weight: 700; text-decoration: none; }
+  .linkcard .v a:hover, .linkcard .v a:focus-visible { text-decoration: underline; }
+
+  .sources {
+    margin-top: 56px; padding-top: 20px; border-top: 1px solid var(--line);
+    font-size: 13px; color: var(--soft);
+  }
+  .sources ol { padding-left: 18px; margin: 8px 0 0; }
+  .sources li { margin-bottom: 6px; }
+  .sources a { color: var(--muted); }
+  a { color: inherit; }
+
+  .next-note {
+    font-size: 13px; color: var(--soft); margin-top: -8px; margin-bottom: 20px;
+  }
+
+  @media (max-width: 560px) {
+    h1 { font-size: 32px; }
+    .wrap { padding: 40px 18px 72px; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="kicker">Reacher Creator Portal &middot; Feature Case</div>
+  <h1>Refer &amp; Earn</h1>
+  <p class="dek">A performance-based referral loop: creators invite other creators (and brands) and earn milestone bonuses funded by Reacher, paid only as the people they bring actually perform.</p>
+  <div class="byline">Written by Aasritha Narayan &middot; 8-hour design challenge, Sept 2026</div>
+
+  <h2>The insight</h2>
+  <p class="lede">Creators aren't loyal to affiliate tools the way they're loyal to a brand or a following. They're commercial operators who go where the economics and the deal flow are best, and they multi-home across two or three platforms at once rather than fully switching. That means the fight for Reacher isn't "get creators to delete Trybe." It's <strong>get Reacher into rotation, and make it the app they invest their attention in</strong>.</p>
+
+  <p>Two things shape how that happens:</p>
+  <ul class="plain">
+    <li><strong>Creators trust other creators, not cold outreach.</strong> A creator fielding 20 brand DMs a day tunes most of them out; a personal invite from a peer who's already getting paid on the platform carries real weight. The best acquisition channel for a creator tool is the creators already on it.</li>
+    <li><strong>The creator economy is visibly anxious about anything that smells like MLM recruiting.</strong> "Refer people, get paid" is a mechanic the industry associates with pyramid structures almost by reflex. A referral feature that pays a flat bounty for a signup, or that could plausibly be read as taking a cut of the person you referred, will get side-eyed by exactly the audience it's meant to win over.</li>
+  </ul>
+  <p>Both point the same direction: the referral loop has to be built on <em>real, ongoing performance</em>, not a signup bounty, and the trust framing has to be explicit and on-screen, not just in the terms.</p>
+
+  <h2>The competitive gap</h2>
+  <p>TikTok Shop already runs its own native creator referral program, which is the clearest evidence this lever works, and the clearest gap to build into. Per TikTok Shop's own seller documentation, the program is an <strong>invite-only pilot</strong>: an invitee has to sign up, post one shoppable video, and land one qualifying sale, and the inviter's reward for all twenty possible invitees is paid <strong>once, in a lump sum, after the whole campaign period ends</strong>. There's no running balance, no visibility mid-cycle, and it can be switched off between pilots.</p>
+  <p>Euka, the closest creator-facing competitor with a shipping mobile app, already has leaderboard-based contests as a retention hook, so gamified ranking alone is table stakes, not a wedge. Trybe is the platform most often cited as viral in the creator community, but that virality reads as organic word-of-mouth about deal quality; there's no public evidence it has engineered peer referral into the product itself.</p>
+
+  <div class="table-scroll">
+  <table>
+    <tr><th>Mechanic</th><th>TikTok Shop (native)</th><th>Euka</th><th>Reacher: Refer &amp; Earn</th></tr>
+    <tr>
+      <td>Availability</td>
+      <td><span class="pill pill-warn">Invite-only pilot</span></td>
+      <td>Always-on</td>
+      <td><span class="pill pill-good">Always-on</span></td>
+    </tr>
+    <tr>
+      <td>What triggers a reward</td>
+      <td>One sale from the invitee</td>
+      <td>Contest placement</td>
+      <td class="hl">4 real milestones over time</td>
+    </tr>
+    <tr>
+      <td>When it's paid</td>
+      <td>Lump sum, after campaign ends</td>
+      <td>Per contest</td>
+      <td class="hl">As each milestone lands</td>
+    </tr>
+    <tr>
+      <td>Visible mid-cycle?</td>
+      <td>No</td>
+      <td>Yes (leaderboard)</td>
+      <td>Yes, live crew progress</td>
+    </tr>
+    <tr>
+      <td>Funded by</td>
+      <td>TikTok Shop</td>
+      <td>Euka / brand pool</td>
+      <td>Reacher, never the invitee</td>
+    </tr>
+  </table>
+  </div>
+
+  <h2>The feature, and why it wins</h2>
+  <h3>Refer &amp; Earn</h3>
+  <p>Creators get a personal link and invite other creators (or brands) into Reacher. Every invite is tracked against a milestone ladder, capped at <strong>$475 per referred creator</strong>:</p>
+
+  <div class="steps">
+    <div class="step"><div class="n">1</div><div class="body"><div class="t">They join (tracked, not paid)</div><div class="d">Signs up with the referrer's link. This step exists so the referrer sees momentum immediately, without implying a signup bounty.</div></div></div>
+    <div class="step"><div class="n">2</div><div class="body"><div class="t">Posts a first video: +$25</div><div class="d">The first real signal the invitee is actually using the platform.</div></div></div>
+    <div class="step"><div class="n">3</div><div class="body"><div class="t">Reaches $1,000 GMV: +$150</div><div class="d">The invitee is now a genuine earner, not a stub account.</div></div></div>
+    <div class="step"><div class="n">4</div><div class="body"><div class="t">Gets ad-funded by a brand: +$300</div><div class="d">The invitee has reached Reacher's highest-trust tier, where a brand pays to run their content as an ad.</div></div></div>
+  </div>
+
+  <p>A parallel track pays <strong>$500</strong> when a referred brand runs its first campaign, and the top three referrers each cycle (surfaced against the app's existing Climb-tier system) unlock a shared crew bonus. That folds the loop into a system creators already check, instead of bolting on a new one.</p>
+
+  <blockquote>
+    “Paid by Reacher when a creator you bring hits real milestones. Never a cut of their earnings.”
+    <cite>On-screen trust line, always visible on the Refer &amp; Earn screen</cite>
+  </blockquote>
+
+  <p><strong>Why it attracts new creators:</strong> it turns existing creators into the acquisition channel, using the exact skill they already have: convincing an audience to act on a personal recommendation. Because the payout is bigger and more legible than TikTok's own lump-sum pilot, and clearly not a pyramid, a creator has a genuine, defensible reason to tell a peer "you should be on Reacher," something no amount of paid UA or cold outreach can buy at the same trust level.</p>
+
+  <p><strong>Why it converts creators away from other tools:</strong> multi-homing means the win isn't exclusivity, it's attention share. A referrer has a direct financial stake in their invitee's success on Reacher specifically: coaching them to post, to grow GMV, to get ad-funded, which pulls both people deeper into Reacher's own workflows (Upload, Ads Studio, tier progression) rather than a competitor's. It's retention through social investment, not a lock-in wall.</p>
+
+  <h2>What I built</h2>
+  <p>Refer &amp; Earn as a fifth screen inside Reacher's actual Creator Portal prototype, not a mockup layered on top. It's pushed from a new row on the Profile screen and built entirely from the app's real design tokens, shared UI kit, icon set, and CSS, so it reads as native rather than appended.</p>
+  <ul class="plain">
+    <li>Hero stat, copyable referral link, black "Invite creators" CTA, and the always-visible anti-pyramid trust card.</li>
+    <li>The 4-step milestone ladder, each paid step explicitly tagged "Milestone-paid."</li>
+    <li>A Creators / Brands toggle. The Creators pane holds six referred creators at varied real stages: two maxed out and ad-funded, two mid-pipeline awaiting ad review, one early with a $-to-next-milestone nudge, one just joined, each with a four-segment progress track and a plain-language next step.</li>
+    <li>A referral leaderboard tied to the app's existing Climb-tier system, with the crew bonus for the top three.</li>
+    <li>The Brands pane: the $500 brand-referral explainer and one pending brand under review.</li>
+  </ul>
+
+  <h3>How to find it</h3>
+  <div class="steps">
+    <div class="step"><div class="n">1</div><div class="body"><div class="t">Open the full app</div><div class="d">Use the "Full app" link below. It loads on the Home screen, same as the live prototype.</div></div></div>
+    <div class="step"><div class="n">2</div><div class="body"><div class="t">Tap the avatar, top left</div><div class="d">Next to your handle and tier, under the message icon.</div></div></div>
+    <div class="step"><div class="n">3</div><div class="body"><div class="t">On Profile, tap "Refer &amp; Earn"</div><div class="d">It's the first row under your avatar and name, next to your TikTok Shop level and rate settings.</div></div></div>
+  </div>
+
+  <div class="links">
+    <div class="linkcard">
+      <div class="k">Full app</div>
+      <div class="v"><a href="https://claude.ai/code/artifact/7730eef0-b30d-40c7-8dc9-d21ff04b3cd0" target="_blank" rel="noopener">Open the Creator Portal &rarr;</a><br><span>Home, Brands, Campaigns, Ads Studio, Earnings, Profile, and Refer &amp; Earn, all live and navigable.</span></div>
+    </div>
+    <div class="linkcard">
+      <div class="k">Screen only</div>
+      <div class="v"><a href="https://claude.ai/code/artifact/fd23cb92-f119-45eb-b1cf-b4b3a47317d5" target="_blank" rel="noopener">Open Refer &amp; Earn &rarr;</a><br><span>Just this screen, for a faster look without navigating the app.</span></div>
+    </div>
+  </div>
+  <p class="next-note">Both are interactive: the toggle, copy link, and invite CTA all work.</p>
+
+  <h2>What I'd do next</h2>
+  <p>Given the 8-hour scope, this stops at a fully designed and interactive front end on mock data. The next real increments, in order:</p>
+  <ul class="plain">
+    <li><strong>Wire it to real milestone events</strong>: GMV thresholds, video posts, and Ads Studio approvals already exist as state elsewhere in the app; this needs to listen to them instead of hard-coded rows, plus the same eligibility guardrails TikTok's own program uses (invitee must be genuinely new, self-referral blocked).</li>
+    <li><strong>Build the invitee's side.</strong> Everything here is the referrer's view. The next screen is the "you were invited by @alex.rivera" welcome moment for the person joining. That's half the loop and currently missing.</li>
+    <li><strong>Proactive nudges</strong> when a referred creator is one step from a milestone, so referrers actually go coach them. The mentorship dynamic only works if it's pushed, not just visible on pull.</li>
+    <li><strong>Tune the numbers against real data</strong> once live: the $475 cap, the four milestone weights, and whether brand referral needs a lighter first pass before opening past manual review.</li>
+  </ul>
+
+  <div class="sources">
+    Sources
+    <ol>
+      <li>TikTok Shop Creator Referral Program: <a href="https://seller-us.tiktok.com/university/essay?knowledge_id=4068323947153166&lang=en">seller-us.tiktok.com/university</a></li>
+      <li>Euka Creator: <a href="https://apps.apple.com/us/app/euka-creator/id6757208879">App Store listing</a>, <a href="https://www.g2.com/products/euka-ai/reviews">G2 reviews</a></li>
+      <li>Reacher's existing brand-side positioning: <a href="https://www.reacherapp.com/">reacherapp.com</a></li>
+      <li>Creator commercial-operator dynamics and commission ranges: TikTok Shop affiliate marketing research, 2026</li>
+      <li>Creator-economy MLM-structure perception: general creator-economy commentary, 2026</li>
+    </ol>
+  </div>
+</div>

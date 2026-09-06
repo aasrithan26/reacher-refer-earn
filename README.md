@@ -6,6 +6,16 @@ A performance-based referral loop: creators invite other creators (and brands) a
 
 *Written by Aasritha Narayan · 8-hour design challenge, Sept 2026*
 
+**Live links:**
+- 🔗 [Full app](https://claude.ai/code/artifact/7730eef0-b30d-40c7-8dc9-d21ff04b3cd0) — the whole Creator Portal (Home, Brands, Campaigns, Ads Studio, Earnings, Profile) with Refer & Earn built in as a native screen
+- 🔗 [Refer & Earn screen only](https://claude.ai/code/artifact/fd23cb92-f119-45eb-b1cf-b4b3a47317d5) — just the feature, for a faster look
+- 🔗 [This write-up, as a designed page](https://claude.ai/code/artifact/0fb0e4a8-e5bc-40fb-b09f-4265708784fb)
+
+**How to find it in the app:**
+1. Open the full app link above — it loads on the Home screen.
+2. Tap the avatar, top left (next to your handle and tier).
+3. On the Profile screen, tap **Refer & Earn** — the first row under your name, next to your TikTok Shop level and rate settings.
+
 ---
 
 ## The insight
@@ -39,16 +49,16 @@ Euka, the closest creator-facing competitor with a shipping mobile app, already 
 
 Creators get a personal link and invite other creators (or brands) into Reacher. Every invite is tracked against a milestone ladder, capped at **$475 per referred creator**:
 
-1. **They join (tracked, not paid).** Signs up with the referrer's link. This step exists so the referrer sees momentum immediately, without implying a signup bounty.
-2. **Posts a first video: +$25.** The first real signal the invitee is actually using the platform.
-3. **Reaches $1,000 GMV: +$150.** The invitee is now a genuine earner, not a stub account.
-4. **Gets ad-funded by a brand: +$300.** The invitee has reached Reacher's highest-trust tier, where a brand pays to run their content as an ad.
+1. **They join** (tracked, not paid) — signs up with the referrer's link. This step exists so the referrer sees momentum immediately, without implying a signup bounty.
+2. **Posts a first video: +$25** — the first real signal the invitee is actually using the platform.
+3. **Reaches $1,000 GMV: +$150** — the invitee is now a genuine earner, not a stub account.
+4. **Gets ad-funded by a brand: +$300** — the invitee has reached Reacher's highest-trust tier, where a brand pays to run their content as an ad.
 
-A parallel track pays **$500** when a referred brand runs its first campaign, and the top three referrers each cycle (surfaced against the app's existing Climb-tier system) unlock a shared crew bonus. That folds the loop into a system creators already check, instead of bolting on a new one.
+A parallel track pays **$500** when a referred brand runs its first campaign, and the top three referrers each cycle (surfaced against the app's existing Climb-tier system) unlock a shared crew bonus, folding the loop into a system creators already check instead of bolting on a new one.
 
 > "Paid by Reacher when a creator you bring hits real milestones. Never a cut of their earnings."
 >
-> On-screen trust line, always visible on the Refer & Earn screen
+> — on-screen trust line, always visible on the Refer & Earn screen
 
 **Why it attracts new creators:** it turns existing creators into the acquisition channel, using the exact skill they already have: convincing an audience to act on a personal recommendation. Because the payout is bigger and more legible than TikTok's own lump-sum pilot, and clearly not a pyramid, a creator has a genuine, defensible reason to tell a peer "you should be on Reacher," something no amount of paid UA or cold outreach can buy at the same trust level.
 
@@ -64,10 +74,6 @@ Refer & Earn as a fifth screen inside Reacher's actual Creator Portal prototype,
 - A referral leaderboard tied to the app's existing Climb-tier system, with the crew bonus for the top three.
 - The Brands pane: the $500 brand-referral explainer and one pending brand under review.
 
-**Included alongside this write-up:**
-- **Integrated build**: live inside the full Creator Portal codebase. Routing, toggle, copy-to-clipboard, and toasts all verified end to end.
-- **Standalone prototype**: self-contained, interactive, no setup. Same screen, same data, for a quick look without cloning anything.
-
 ## What I'd do next
 
 Given the 8-hour scope, this stops at a fully designed and interactive front end on mock data. The next real increments, in order:
@@ -79,8 +85,8 @@ Given the 8-hour scope, this stops at a fully designed and interactive front end
 
 ## Sources
 
-1. [TikTok Shop Creator Referral Program](https://seller-us.tiktok.com/university/essay?knowledge_id=4068323947153166&lang=en): seller-us.tiktok.com/university
+1. [TikTok Shop Creator Referral Program](https://seller-us.tiktok.com/university/essay?knowledge_id=4068323947153166&lang=en) — seller-us.tiktok.com/university
 2. Euka Creator: [App Store listing](https://apps.apple.com/us/app/euka-creator/id6757208879), [G2 reviews](https://www.g2.com/products/euka-ai/reviews)
-3. [Reacher's existing brand-side positioning](https://www.reacherapp.com/): reacherapp.com
+3. [Reacher's existing brand-side positioning](https://www.reacherapp.com/) — reacherapp.com
 4. Creator commercial-operator dynamics and commission ranges: TikTok Shop affiliate marketing research, 2026
 5. Creator-economy MLM-structure perception: general creator-economy commentary, 2026
