@@ -8,8 +8,7 @@ A performance-based referral loop: creators invite other creators (and brands) a
 
 **Live links:**
 - 🔗 [Full app](https://claude.ai/code/artifact/7730eef0-b30d-40c7-8dc9-d21ff04b3cd0) — the whole Creator Portal (Home, Brands, Campaigns, Ads Studio, Earnings, Profile) with Refer & Earn built in as a native screen
-- 🔗 [Refer & Earn screen only](https://claude.ai/code/artifact/fd23cb92-f119-45eb-b1cf-b4b3a47317d5) — just the feature, for a faster look
-- 🔗 [This write-up, as a designed page](https://claude.ai/code/artifact/0fb0e4a8-e5bc-40fb-b09f-4265708784fb)
+- 🔗 [This write-up](https://claude.ai/code/artifact/0fb0e4a8-e5bc-40fb-b09f-4265708784fb)
 
 **How to find it in the app:**
 1. Open the full app link above — it loads on the Home screen.
